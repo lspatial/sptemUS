@@ -1,0 +1,26 @@
+Package: sptemUS
+Type: Package
+Title: Constrained Spatiotemporal Mixed-Effect Models for Exposure Estimation of Air Pollutants
+Version: 0.1.0
+Author: Lianfa Li 
+Maintainer: Lianfa Li <lspatial@gmail.com> 
+Description: The approach of constrained spatiotemporal mixed models is to make reliable estimation 
+    of air pollutant concentrations at high spatiotemporal resolution (currently mainly for NO2 and 
+    NOx, applied in California). It is based on our published paper in 2017 (Li, L., Lurmann, F., 
+    Habre, R., Urman, R., Rappaport, E., Ritz, B., Chen, J., Gilliland, F., Wu, J., (2017) 
+    <doi:10.1021/acs.est.7b01864>).
+    Specifically, it includes the following functionalities: 
+    1) Extracting meteorological parameters from the US continential grids dataset on the server; 
+    2) Extracting Thiessen's polygon id for spatial effect models using the models trained on the server; 
+    3) Extracting the yearly means based on the configuration of Thiesseon polygons based on the data on the server; 
+    4) Parallel predictions using python to call the functions on the server side ;
+    5) Constrained optimization to adjust the estimated concentrations; 
+Depends: R (>= 2.14)
+Imports: Rcpp (>= 0.12.12), methods,RCurl, rgdal, raster,deldir, SpatioTemporal,plyr,sp,limSolve, R2BayesX,BayesX,BayesXsrc,ncdf4, bcv, rgeos, splines, parallel, foreach,doParallel,automap
+LinkingTo: Rcpp, RcppEigen
+SystemRequirements: C++11    
+License: GPL
+Encoding: UTF-8
+LazyData: true 
+NeedsCompilation: yes
+RoxygenNote: 6.0.1 
